@@ -10,3 +10,6 @@ source ~/.bash_aliases
 source .colors
 
 export PS1="\[$txtblu\]\u\[$txtrst\]@\[$txtgrn\]\h\[$txtrst\]:\[$txtylw\]\w\[$txtrst\]\$ "
+
+# custom configs for specific machine
+source .custom
