@@ -27,7 +27,9 @@ set listchars=tab:>.,trail:.,extends:#,nbsp:.
 "enable 256 bit colors
 set t_Co=256
 syntax on
-colorscheme ir_black
+"TODO: import ir_black as vim color instead of via iterm
+"colorscheme ir_black
+
 
 filetype off                  " required
 
@@ -48,6 +50,11 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'FelikZ/ctrlp-py-matcher'
 Plugin 'bling/vim-airline'
 Plugin 'scrooloose/syntastic'
+Plugin 'klen/python-mode'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'tomtom/tcomment_vim'
+Plugin 'tpope/vim-surround'
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -88,3 +95,18 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_python_checkers = ['flake8']
+let g:syntastic_python_flake8_args = '--ignore=E501,E225'
+"let g:syntastic_debug = 1
+
+"let g:syntastic_extra_filetypes = ['htmlcheetah']
+"let g:syntastic_htmlcheetah_checkers = ['cheetah-flake']
+
+
+let g:pymode_rope_goto_definition_cmd = 'vnew' "Make python mode go to defintion open in vertical split
+let g:pymode_rope_regenerate_on_write = 0
+let g:pymode_options_max_line_length = 120
+let g:pymode_lint = 0 "Don't conflict with syntastic
+let g:pymode_rope_complete_on_dot = 0
+set laststatus=2 "Make vim-airline status appear all the time
