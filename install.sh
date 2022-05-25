@@ -18,5 +18,5 @@ ln -s ${REPO}/.bash_alias/ ~/.bash_aliases
 
 source ~/.bashrc
 
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+git clone https://github.com/VundleVim/Vundle.vim ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
